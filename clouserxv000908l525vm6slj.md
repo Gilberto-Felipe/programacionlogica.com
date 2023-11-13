@@ -112,7 +112,7 @@ El operador módulo se suele usar para
 
 * verificar si un número es divisible entre otro
     
-* obtener el último dígito de un número decimal
+* obtener el último dígito de un número
     
 
 Representamos el operador módulo con `mod` o el símbolo `%`.
