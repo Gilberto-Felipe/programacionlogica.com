@@ -144,7 +144,7 @@ Expresamos las dos operaciones de forma abreviada así: `1 % 2 == 0`.
 
 Una variable acumuladora sirve para almacenar y actualizar valores. La diferencia con una variable normal es que agrega un nuevo valor al que ya tiene.
 
-Generalmente, usamos las variables acumuladoras dentro de ciclos. Cada iteración del ciclo acumula un nuevo valor.
+Generalmente, usamos las variables acumuladoras dentro de ciclos. Cada iteración del ciclo suma un nuevo valor.
 
 *Patron de código de variable acumuladora*
 
