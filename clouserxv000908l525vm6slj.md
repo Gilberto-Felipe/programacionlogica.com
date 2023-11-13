@@ -1,10 +1,10 @@
 ---
-title: "003. Problema: Cálculo con pares e impares"
+title: "003. Problema: Calcular pares e impares"
 seoTitle: "Algoritmo calcular pares, impares y promedio."
 seoDescription: "Algoritmo calcular pares, impares y promedio. El artículo enseña cómo diseñar un algoritmo paso a paso. Explica patrones y operaciones implicadas."
 datePublished: Sun Nov 12 2023 01:18:46 GMT+0000 (Coordinated Universal Time)
 cuid: clouserxv000908l525vm6slj
-slug: 003-problema-calculo-con-pares-e-impares
+slug: 003-problema-calcular-pares-e-impares
 cover: https://cdn.hashnode.com/res/hashnode/image/stock/unsplash/JhevWHCbVyw/upload/f4fa974e6f6aeff0e416c741a8a7222b.jpeg
 tags: programacion, algortimos, nivel-basico
 
