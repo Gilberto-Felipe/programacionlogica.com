@@ -12,7 +12,7 @@ tags: programacion, diseno-de-algoritmos, nivel-basico
 
 ## Problema
 
-Resuelve la ecuación de primer grado con los datos de entrada de los ejemplos.
+Resuelve la ecuación de primer grado con los datos de entrada de los ejemplos. Escribe el resultado, o si el resultado es indeterminado o imposible.
 
 $$ax + b = 0$$
 
@@ -77,11 +77,18 @@ Este problema nos da los casos en los que puede caer el programa. En muchas ocas
 
 ### 1\. Idea de solución
 
-Usar un codicional compuesto para resolver el problema. En la primera rama, evaluamos el caso feliz, donde a &lt;&gt; 0.
-
-En la segunda rama, creamos otras dos ramas con un condicional compuesto para evaluar los casos donde la solución es imposible o indeterminada.
+Usar un codicional compuesto para resolver el problema. En la primera rama, evaluamos el caso feliz, donde a &lt;&gt; 0. En la segunda rama, evaluamos los casos donde la solución es imposible o indeterminada.
 
 ### 2\. Diseño
+
+Observamos que no nos piden resolver paso a paso la ecuación. Luego, el despeje de `x` lo podemos hacer manualmente.
+
+```plaintext
+1. a*x+b = 0
+2. a*x = 0-b
+3. x = -b/a
+La ultimo paso es el que nos interesa. 
+```
 
 *Primer diseño*
 
