@@ -12,7 +12,7 @@ tags: programacion, diseno-de-algoritmos, nivel-basico
 
 ## Problema
 
-Resuelve la ecuación de primer grado con los datos de entrada de los ejemplos. Escribe el resultado, o si el resultado es indeterminado o imposible.
+Resuelve la ecuación de primer grado con los datos de entrada. Escribe el resultado, o si el resultado es indeterminado o imposible.
 
 $$ax + b = 0$$
 
@@ -34,11 +34,11 @@ Entrada: a=2, b=4
 Salida: x = -b/a => -2
 ```
 
-*Consejo: Antes de escribir código debes saber cómo se resuelve el problema* a *mano. Piensa en cómo lo resuelves sin código. Haz el algoritmo paso a paso en un papel o en el editor de código. Luego compara tu solución con la del artículo.*
+*Consejo: Antes de escribir código debemos saber cómo se resuelve el problema. Piensa en cómo lo resuelves sin código. Haz el algoritmo paso a paso en un papel o en el editor de código. Luego compara tu solución con la del artículo.*
 
 ## 1\. Análisis
 
-Nos piden resolver una ecuación de primer grado. Los valores conocidos (entrada) son a, b. Para resolver la ecuación tenemos que saber qué son y cómo se resuelven. De lo contrario, estamos atorados.
+Nos piden resolver una ecuación de primer grado. Los valores conocidos -entrada- son a, b. Para resolver la ecuación tenemos que saber qué es y cómo se resuelven. De lo contrario, estamos atorados. Repasemos.
 
 *Ecuación de primer grado*
 
@@ -62,22 +62,22 @@ La ecuación que nos pasan tiene la forma de `a * x + b = 0`. El cálculo consis
 
 Con eso resolvemos la ecuación. Pero, la solución puede caer en tres casos o escenarios diferentes. Los casos son:
 
-* Si a &lt;&gt; 0, resolvemos la operación.
+* Si a es diferente de 0, resolvemos la operación.
     
-* Si a = 0 y b &lt;&gt; 0, la solución es imposible.
+* Si a = 0 y b diferente de 0, la solución es imposible.
     
 * Si a = 0 y b = 0, la solución es indeterminada.
     
 
 El 0 es problemático porque la ecuación despejada termina siendo `0/0`, o `-b/0`.
 
-Este problema nos da los casos en los que puede caer el programa. En muchas ocasiones, no vienen dados. Debemos pensar en ellos y encontrarlos.
+Este problema nos da los casos o escenarios en los que puede caer el programa. En muchas ocasiones, estos casos no vienen dados. Debemos pensar en ellos y encontrarlos.
 
 ## 2\. Diseño del algoritmo
 
 ### 1\. Idea de solución
 
-Usar un codicional compuesto para resolver el problema. En la primera rama, evaluamos el caso feliz, donde a &lt;&gt; 0. En la segunda rama, evaluamos los casos donde la solución es imposible o indeterminada.
+Usar un codicional compuesto para resolver el problema. En la primera rama, evaluamos el caso feliz, donde a diferente de 0. En la segunda rama, evaluamos los casos donde la solución es imposible o indeterminada.
 
 ### 2\. Diseño
 
@@ -87,7 +87,6 @@ Observamos que no nos piden resolver paso a paso la ecuación. Luego, el despeje
 1. a*x+b = 0
 2. a*x = 0-b
 3. x = -b/a
-La ultimo paso es el que nos interesa. 
 ```
 
 *Primer diseño*
