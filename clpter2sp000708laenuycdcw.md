@@ -16,24 +16,6 @@ Resuelve la ecuación de primer grado con los datos de entrada. Escribe el resul
 
 $$ax + b = 0$$
 
-```plaintext
-Ejemplo 1
-Entrada: a=0, b=3
-Salida: indeterminada
-```
-
-```plaintext
-Ejemplo 2
-Entrada: a=0, b=0
-Salida: imposible
-```
-
-```plaintext
-Ejemplo 3
-Entrada: a=2, b=4
-Salida: x = -b/a => -2
-```
-
 *Consejo: Antes de escribir código debemos saber cómo se resuelve el problema. Piensa en cómo lo resuelves sin código. Haz el algoritmo paso a paso en un papel o en el editor de código. Luego compara tu solución con la del artículo.*
 
 ## 1\. Análisis
@@ -77,45 +59,15 @@ Este problema nos da los casos o escenarios en los que puede caer el programa. E
 
 ### 1\. Idea de solución
 
-Usar un codicional compuesto para resolver el problema. En la primera rama, evaluamos el caso feliz, donde a diferente de 0. En la segunda rama, evaluamos los casos donde la solución es imposible o indeterminada.
+Usar un condicional compuesto para resolver el problema. En la primera rama, evaluamos el caso feliz, donde a diferente de 0. En la segunda rama, evaluamos los casos donde la solución es imposible o indeterminada.
 
 ### 2\. Diseño
 
 Observamos que no nos piden resolver paso a paso la ecuación. Luego, el despeje de `x` lo podemos hacer manualmente.
 
-```plaintext
-1. a*x+b = 0
-2. a*x = 0-b
-3. x = -b/a
-```
-
 *Primer diseño*
 
-```plaintext
-1. Si a <> 0, resolver y escribir resultado.
-2. Si a = 0 y b <> 0, escribir imposible.
-3. Si a = 0 y b = 0, escribir indeterminada.
-```
-
 *Pseudocódigo*
-
-```plaintext
-variables
-    real a, b, x
-
-inicio
-    si a <> 0, entonces
-        x ← -b/a
-        escribir(x)
-    si no, entonces
-        si b <> 0, entonces
-            escribir(Solución imposible)
-        si no, entonces
-            escribir(Solución indeterminada)
-        fin si
-    fin si
-fin
-```
 
 ### 3\. Comprobación en seco
 
@@ -128,21 +80,18 @@ fin
 ## 3\. Codificación
 
 ```python
-# Programa Ecuación de primer grado 
-# variables
-a = 0
-b = 0
+def resolver_ecuacion(a, b):
+    if a != 0:
+        return -b / a
+    elif a == 0 and b != 0:
+        return "imposible"
+    elif a == 0 and b == 0:
+        return "indeterminada"
 
-# inicio
-if a != 0:
-    x = -b / a
-    print(x)
-else:
-    if b != 0:
-        print("Solución imposible")
-    else:
-        print("Solución indeterminada")
-# fin
+# Ejemplos de uso
+print(resolver_ecuacion(0, 3))  # imposible
+print(resolver_ecuacion(0, 0))  # indeterminada
+print(resolver_ecuacion(2, 4))  # -2
 ```
 
 ## 4\. Complejidad
@@ -154,6 +103,10 @@ No hay una colección de datos, es una entrada sola.
 Espacio: O(1) constante
 
 No hay una estructura de datos extra que ocupe espacio en memoria.
+
+## Conclusión
+
+Hemos analizado y resuelto una ecuación de primer grado considerando diferentes escenarios. La implementación en código refleja los casos posibles: solución única, solución imposible o solución indeterminada.
 
 ## Bibliografía
 
