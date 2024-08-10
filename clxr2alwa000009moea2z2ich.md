@@ -1,7 +1,7 @@
 ---
 title: "Descubre el día de la semana de cualquier fecha del mes"
 seoTitle: "Descubre cómo determinar el día de la semana de cualquier día del mes"
-seoDescription: "Descubre cómo determinar el día de la semana de cualquier fecha del mes, asumiendo que el primer día es lunes. Aprende a resolver este problema paso a paso "
+seoDescription: "Descubre cómo determinar el día de la semana de cualquier fecha del mes, asumiendo que el primer día es lunes. Aprende a resolver este problema paso a paso"
 datePublished: Sun Jun 23 2024 04:41:44 GMT+0000 (Coordinated Universal Time)
 cuid: clxr2alwa000009moea2z2ich
 slug: descubre-el-dia-de-la-semana-de-cualquier-fecha-del-mes
@@ -10,7 +10,7 @@ tags: programacion, diseno-de-algoritmos, nivel-basico
 
 ---
 
-Imagina que quieres saber qué día de la semana es un día específico del mes, sabiendo que el primer día del mes es lunes. Este artículo te mostrará cómo hacerlo de manera sencilla.
+Imagina que quieres saber qué día de la semana es un día específico del mes, sabiendo que el primer día del mes es lunes. Este artículo te mostrará cómo resolver este problema y codificar la solución en Python..
 
 ## Problema
 
@@ -38,15 +38,29 @@ Salida: jueves
 
 ## 1\. Análisis
 
-El problema nos pide saber qué día de la semana es a partir de un día del mes. El primer día del mes corresponde a lunes. En otras palabras, se nos pide hacer un mapeo del día del mes al día de la semana correspondiente.
+El problema nos pide saber qué día de la semana es a partir de un día del mes. El primer día del mes corresponde a lunes. En otras palabras, se nos pide hacer un mapeo del día del mes que nos dan al día de la semana correspondiente. Por ejemplo, si me dan el día 9 de mes la respuesta sería martes.
+
+Vamos a explicarlo con pelotas y con 7 cajas para guardar las pelotas. Dentro de cada caja caben varias pelotas. Las reglas:
+
+Sólo puedes poner una pelota en la caja a la vez. La siguiente pelota va en la siguiente caja. No puedes saltar de caja. Cuando terminas de recorrer las 7 cajas vuelves a poner la siguiente pelota en la primera caja.
+
+Las pelotas representa el día dado. Supongamos que nos dan 9 pelotas, el día 9 del mes.
+
+| Lun 🟢 | Mar 🔵 | Mié 🟡 | Jue 🟠 | Vie 🟣 | Sáb 🟤 | Dom🔴 |
+
+| Lun 🟢 | Mar 🔵 | Mié | Jue | Vie | Sáb | Dom |
 
 ## 2\. Diseño del algoritmo
 
 ### 1\. Idea de solución
 
-Tenemos dos datos: el día del mes y 7 días de la semana. Una primera idea es usar la división. Pero, ¿cómo puedo mapear un día específico del mes a su posición dentro del día de la semana? La división no me sirve. Necesito usar otra operación.
+Como primer paso, tengo que encontrar una operación que me permita obtener del día del mes las 7 cajas o valores de forma constante.
 
-Otra idea es usar el resto de la división. ¿Por qué? Porque el resto de dividir por 7 un número puede dar 7 valores diferentes (0 al 6). Así pues, los valores del resto de la división me sirven para mapearlos a los días de la semana.
+Una primera idea, sería usar la división: 9 / 1 = 9; 9 / 2 = 4.5; y no avanzo con mi objetivo.
+
+Otra idea es usar el resto o residuo de la división. ¿Por qué? Porque en este caso, la operación resto nos devuelve un número comprendido entre 0 y 7. Allí tenmos los 7 valores que necesitmamos. Por ejemplo, el residuo de 9 dividido 7 es 2.
+
+Luego, el segundo paso es mapear estos 7 valores a los días de la semana.
 
 Este es el mapeo:
 
@@ -66,11 +80,11 @@ Si deciden cambiar el día de referencia, es decir, que el primer día de la sem
 
 Para resolver este problema sigue estos pasos:
 
-1. Usar la operación residuo de una división que nos regresa un valor que correspondería al día de la semana.
+1. Obtener el residuo del día del mes entre 7.
     
-2. Mapear el resultado del residuo al día de la semana.
+2. Mapear el resultado al día de la semana.
     
-3. Imprime el día de la semana.
+3. Imprimir el día de la semana.
     
 
 ```plaintext
